@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Basic Page Needs
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<title>Lua Workshop 2016 - San Francisco</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- FONT
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+	<!-- CSS
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Favicon
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="icon" type="image/png" href="favicon.ico">
+
+	<script src="js/smooth-scroll.js"></script>
+
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script>
+	function initialize() {
+		var mapCanvas = document.getElementById('map-canvas');
+		var myLatlng = new google.maps.LatLng(37.7940284, -122.4050043);
+		var mapOptions = {
+			center: myLatlng,
+			zoom: 17,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		var map = new google.maps.Map(mapCanvas, mapOptions);
+
+		var marker = new google.maps.Marker({
+			position: myLatlng,
+			map: map,
+			title: 'Mashape'
+		});
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+
+<body>
+	<!-- Top navigation and logo -->
+	<div style="background: #EAEAEA; padding-left: 10%; padding-right: 10%; padding-bottom: 50px">
+		<div class="row" style="padding-top: 15px">
+			<div class="twelve columns" style="text-align: right;">
+				<p>
+					<a data-scroll href="#ABOUT" style="margin-right: 20px">ABOUT</a><a data-scroll href="#SCHEDULE" style="margin-right: 20px">SCHEDULE</a><a data-scroll href="#SPEAKERS" style="margin-right: 20px">SPEAKERS</a><a data-scroll href="#ATTEND">ATTEND</a>
+				</p>
+			</div>
+		</div>
+		<div class="row" style="">
+			<div class="three columns">
+				<img src="images/Lua-Logo.png" width="130" height="130"/>
+			</div>
+			<div class="three columns">
+				<h4>
+					Lua Workshop 2016
+				</h4>
+			</div>
+			<div class="six columns" style="text-align: right">
+				<h5>October 13-14</h5>
+				<p>
+					Mashape HQ,<br/>
+					San Francisco,<br/>California
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Main page content -->
+		<div style="background-image: url(golden-gate.jpg); background-repeat: no-repeat; background-position: center top; background-attachment: fixed; background-size: cover">
+
+			<div class="container" style="color: white; text-shadow: 1px 1px black;">
+				<div class="row">
+					<div class="twelve columns" style="margin-top: 50px; margin-bottom: 50px">
+						<h4 id="ABOUT">About workshop</h4>
+						<p>The Lua Workshop 2016 will be held in San Francisco on the 13th and 14th of October. This year's workshop will mark the 11 year anniversary of the Lua workshops!</p>
+						<p>
+							As in <a href="http://www.lua.org/community.html">previous workshops</a>, the main goal of the workshop is to allow the Lua community to get together and meet in person and talk about the Lua language, its uses, and its implementation.
+						</p>
+						<p>
+							The spoken language of the workshop will be English.
+						</p>
+					</div>
+				</div>
+				</div>
+		</div>
+
+		<div class="container">
+
+		<div class="row" style="margin-top: 5%">
+			<div class="twelve columns">
+				<h4 id="SCHEDULE">Schedule (IN PROGRESS)</h4>
+			</div>
+		</div>
+		<!--
+		<div class="row">
+			<div class="twelve columns">
+				<h5>Day 0, October 14</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/beer.png" width="25px" class="time"/><p class="time">19:00</p></div>
+			<div class="nine columns"><p>Pre-workshop meetup</br><a href="https://www.google.se/maps/place/Monks+American+Bar/@59.3374682,18.0612172,17z/data=!3m1!4b1!4m2!3m1!1s0x465f9d67bbd1c05f:0xcccfeb48c94fa4cb">Monk's American Bar, Sveavägen 39</a></p></div>
+		</div>
+
+		<div class="row">
+			<div class="twelve columns">
+				<h5>Day 1, October 15</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">08:00-09:00</p></div>
+			<div class="nine columns"><p>Registration and badge pick-up</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">09:00-09:15</p></div>
+			<div class="nine columns"><p>Thomas Hartwig</br>Welcome to the Lua Workshop</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">09:15-09:45</p></div>
+			<div class="nine columns"><p>Ragnar Svensson</br>"Lua in the Defold game engine"</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">09:45-10:15</p></div>
+			<div class="nine columns"><p>Johan Högfeldt</br>"Creating a game using Defold and Lua"</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">10:15-11:15</p></div>
+			<div class="nine columns"><p>Niklas Frykholm</br>"Lua in the Stingray 3D game engine"</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">11:15-12:15</p></div>
+			<div class="nine columns"><p>Roberto Ierusalimschy</br>"Testing Lua"</p></div>
+		</div>
+
+		<div class="row">
+			<div class="three columns"><img src="images/dinner.jpeg" width="25px" class="time"/><p class="time">12:15-13:15</p></div>
+			<div class="nine columns"><p>Lunch, courtesy of King</p></div>
+		</div>
+
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">13:15-14:00</p></div>
+			<div class="nine columns"><p>Robert Virding</br>"Luerl - an implementation of Lua on the Erlang VM"</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">14:00-14:45</p></div>
+			<div class="nine columns"><p>Johan Lövdahl</br>"Shen: An API Gateway for mobile games using Lua + Erlang"</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">14:45-15:30</p></div>
+			<div class="nine columns"><p>Stefan Pejic, Djordje Kovacevic</br>"Improvements of LuaJIT for MIPS32 and MIPS64 platforms"</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">15:30-16:00</p></div>
+			<div class="nine columns"><p>Violeta Vukobrat</br>"Clang plugin for generating declarations for the LuaJIT FFI library"</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">16:00-16:45</p></div>
+			<div class="nine columns"><p>Dibyendu Majumdar<br>"Ravi"</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">16:45-17:45</p></div>
+			<div class="nine columns"><p>Marc Balmer</br>"Supporting Elephants with PostgreSQL and Lua"</p></div>
+		</div>
+
+		<div class="row">
+			<div class="three columns"><img src="images/dinner.jpeg" width="25px" class="time"/><p class="time">19:00</p></div>
+			<div class="nine columns"><p>Pizza, beer and Lua, courtesy of King</br><a href="https://www.google.se/maps/place/King.com+-+Midasplayer+AB/@59.3372102,18.0600852,17.07z/data=!4m7!1m4!3m3!1s0x465f9d67973cafa5:0xec4f8d8d41ee0d2f!2sSveav%C3%A4gen+44,+111+34+Stockholm!3b1!3m1!1s0x465f9d67973cafa5:0x2396260b920e8e57?hl=en">King's office, Sveavägen 44</a></p></div>
+		</div>
+
+		<div class="row">
+			<div class="twelve columns">
+				<h5>Day 2, October 16</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">09:00-10:00</p></div>
+			<div class="nine columns"><p>Dirk Feytons</br>"Using Lua in a residential gateway"</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">10:00-10:30</p></div>
+			<div class="nine columns"><p>Alexander Gladysh</br>"Ad-hoc big data analysis with Lua and LuaJIT"</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">10:30-11:15</p></div>
+			<div class="nine columns"><p>Pablo Musa</br>"Elasticsearch for Lua Developers"</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">11:15-12:15</p></div>
+			<div class="nine columns"><p>Konstantin Osipov</br>"Tarantool - a Lua based database engine and in-memory data grid"</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">12:15-13:15</p></div>
+			<div class="nine columns"><p>Daniel Kolesa</br>"High level application scripting with Enlightenment Foundation Libraries and LuaJIT"</p></div>
+		</div>
+
+		<div class="row">
+			<div class="three columns"><img src="images/dinner.jpeg" width="25px" class="time"/><p class="time">13:30-14:30</p></div>
+			<div class="nine columns"><p>Lunch, courtesy of King</p></div>
+		</div>
+
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">14:30-15:30</p></div>
+			<div class="nine columns"><p>Pablo Musa</br>"Profiling Memory in Lua"</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">15:30-16:00</p></div>
+			<div class="nine columns"><p>Ignacio Burgueño</br>"At the end of the rainbow"</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">16:00-16:30</p></div>
+			<div class="nine columns"><p>Ignacio Burgueño</br>"Always be testing"</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">16:30-17:00</p></div>
+			<div class="nine columns"><p>Dmitry Potapov</br>"Experience of game prototyping with MOAI: from low-level to framework"</p></div>
+		</div>
+		<div class="row">
+			<div class="three columns"><img src="images/clock.png" width="25px" class="time"/><p class="time">17:00-17:30</p></div>
+			<div class="nine columns"><p>Jean-Luc Jumpertz</br>"CodeFlow, an advanced IDE for Lua"</p></div>
+		</div>
+		-->
+
+		<div class="row" style="margin-top: 10%">
+			<div class="twelve columns">
+				<h4 id="SPEAKERS">Speakers (IN PROGRESS)</h4>
+				<p>
+				</p>
+			</div>
+		</div>
+
+		<!--
+		<div class="row">
+			<div class="four columns">
+				<p>
+					"Testing Lua"</br>
+					Roberto Ierusalimschy</br>
+					Chief architect, Lua</br>
+					<a href="https://www.youtube.com/watch?v=yU5QNKpATxk" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+				</p>
+			</div>
+			<div class="four columns">
+				<p>
+					"Lua in the Defold game engine"</br>
+					Ragnar Svensson</br>
+					<a href="https://www.youtube.com/watch?v=paNVnAIVkgk" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+				</p>
+			</div>
+			<div class="four columns">
+				<p>
+					"Creating a game using Defold and Lua"</br>
+					Johan Högfeldt</br>
+					<a href="https://www.youtube.com/watch?v=YjCVOVNGhyw" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="four columns">
+				<p>
+					"Lua in the Stingray 3D game engine"</br>
+					Niklas Frykholm</br>
+					<a href="https://www.youtube.com/watch?v=wTjyM7d7_YA" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+				</p>
+			</div>
+			<div class="four columns">
+				<p>
+					"Improvements of LuaJIT for MIPS32 and MIPS64 platforms"</br>
+					Stefan Pejic, Djordje Kovacevic</br>
+					<a href="https://www.youtube.com/watch?v=THnakapeY6Y" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+				</p>
+			</div>
+			<div class="four columns">
+				<p>
+					"Clang plugin for generating declarations for the LuaJIT FFI library"</br>
+					Violeta Vukobrat</br>
+					<a href="https://www.youtube.com/watch?v=EnBcYjPPwyw" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="four columns">
+				<p>
+					"Supporting Elephants with PostgreSQL and Lua"</br>
+					Marc Balmer</br>
+					<a href="https://www.youtube.com/watch?v=cKAFeRZim04" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+				</p>
+			</div>
+			<div class="four columns">
+				<p>
+					"Luerl - an implementation of Lua on the Erlang VM"</br>
+					Robert Virding</br>
+					<a href="https://www.youtube.com/watch?v=A6_bt6tK2Is" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+				</p>
+			</div>
+			<div class="four columns">
+				<p>
+					"Ravi"</br>
+					Dibyendu Majumdar</br>
+					<a href="https://www.youtube.com/watch?v=-ZOBHw1Mk2U" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+					<a href="https://github.com/dibyendumajumdar/ravi/blob/master/readthedocs/ravi-luaconf-2015.pdf" target="_blank"><img src="images/slides.png" class="slides"/></a>
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="four columns">
+				<p>
+					"Tarantool - a Lua based database engine and in-memory data grid"</br>
+					Konstantin Osipov</br>
+					<a href="https://www.youtube.com/watch?v=R9UHoZDFLWg" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+				</p>
+			</div>
+			<div class="four columns">
+				<p>
+					"Elasticsearch for Lua Developers"</br>
+					Pablo Musa</br>
+					<a href="https://www.youtube.com/watch?v=LyVPjoZlpmQ" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+					<a href="https://speakerdeck.com/pmusa/elasticsearch-for-lua-developers" target="_blank"><img src="images/slides.png" class="slides"/></a>
+				</p>
+			</div>
+			<div class="four columns">
+				<p>
+					"Profiling Memory in Lua"</br>
+					Pablo Musa</br>
+					<a href="https://www.youtube.com/watch?v=KdSRgtuhue4" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+					<a href="https://speakerdeck.com/pmusa/profiling-memory-in-lua" target="_blank"><img src="images/slides.png" class="slides"/></a>
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="four columns">
+				<p>
+					"High level application scripting with Enlightenment Foundation Libraries and LuaJIT"</br>
+					Daniel Kolesa</br>
+					<a href="https://www.youtube.com/watch?v=J_hlbjj_9-Q" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+				</p>
+			</div>
+			<div class="four columns">
+				<p>
+					"Shen: An API Gateway for mobile games using Lua + Erlang"</br>
+					Johan Lövdahl</br>
+					<a href="https://www.youtube.com/watch?v=PkjLVDg-3pc" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+				</p>
+			</div>
+			<div class="four columns">
+				<p>
+					"Using Lua in a residential gateway"</br>
+					Dirk Feytons</br>
+					<a href="https://www.youtube.com/watch?v=zVzEmewJG8I" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="four columns">
+				<p>
+					"At the end of the rainbow"</br>
+					Ignacio Burgueño</br>
+					<a href="https://www.youtube.com/watch?v=7c31B1VqzCc" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+					<a href="http://www.slideshare.net/iburgueno/at-the-end-of-the-rainbow-54234230" target="_blank"><img src="images/slides.png" class="slides"/></a>
+				</p>
+			</div>
+			<div class="four columns">
+				<p>
+					"Always be testing"</br>
+					Ignacio Burgueño</br>
+					<a href="https://www.youtube.com/watch?v=sLFwKeyH2Ug" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+					<a href="http://www.slideshare.net/iburgueno/always-be-testing" target="_blank"><img src="images/slides.png" class="slides"/></a>
+				</p>
+			</div>
+			<div class="four columns">
+				<p>
+					"Experience of game prototyping with MOAI: from low-level to framework"</br>
+					Dmitry Potapov</br>
+					<a href="https://www.youtube.com/watch?v=sLFwKeyH2Ug" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="four columns">
+				<p>
+					"Ad-hoc big data analysis with Lua and LuaJIT"</br>
+					Alexander Gladysh</br>
+					<a href="https://www.youtube.com/watch?v=5OWUOWsKskE" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+					<a href="http://www.slideshare.net/agladysh/adhoc-bigdata-analysis-with-lua" target="_blank"><img src="images/slides.png" class="slides"/></a>
+				</p>
+			</div>
+			<div class="four columns">
+				<p>
+					"CodeFlow, an advanced IDE for Lua"</br>
+					Jean-Luc Jumpertz</br>
+					<a href="https://www.youtube.com/watch?v=NvFzHZACohA" target="_blank"><img src="images/youtube.png" class="youtube"/></a>
+					<a href="http://fr.slideshare.net/jljumpertz/codeflow-an-advanced-ide-for-lua" target="_blank"><img src="images/slides.png" class="slides"/></a>
+				</p>
+			</div>
+			<div class="four columns">
+				<p>
+				</p>
+			</div>
+		</div>
+		-->
+		<div class="row">
+			<div  class="twelve colulmns">
+				<p>
+					If you'd like to speak at the workshop, please send a tentative title and a short abstract to <a href="mailto:lua.workshop@gmail.com">lua.workshop@gmail.com</a> with your registration.
+				</p>
+			</div>
+		</div>
+
+		<div class="row" style="margin-top: 10%">
+			<div class="twelve columns">
+				<h4 id="ATTEND">Attend</h4>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="twelve columns">
+				<h5>Registration</h5>
+				<p>
+					The Lua Workshop is free to attend, but seats are limited. If you wish to attend then please send an e-mail to <a href="mailto:lua.workshop@gmail.com">lua.workshop@gmail.com</a>. Please include the name of your company or organization if applicable.
+				</p>
+
+				<h5>Location</h5>
+				<p>
+					The Lua Workshop will take place at the Mashape HQ in the Financial District of San Francisco.
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="six columns">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.8297963250016!2d-122.40500428465312!3d37.79402837975593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808a8ad5fa23%3A0xbc85fdd480db67b4!2sMashape%2C+Inc!5e0!3m2!1sen!2sus!4v1468346410257" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+			<div class="six columns">
+				<h5>Mashape HQ</h5>
+				<p>
+					500-A Montgomery Street<br/>
+					San Francisco, CA 94111 (USA)
+				</p>
+			</div>
+		</div>
+
+		<div class="row" style="margin-top: 20px">
+			<div class="twelve columns">
+				<h5>Badges</h5>
+				<p>
+					Before being admitted to the Lua Workshop all attendees are required to register and pick up a badge. Badges can be picked up in the morning on day one before the workshop sessions begin (please refer to the <a data-scroll href="#SCHEDULE">schedule</a>).
+				</p>
+
+				<h5>Travel</h5>
+				<p>
+						San Francisco International Airport (SFO), the main airport to the city, is located 12 miles south of San Francisco. The Oakland Internation Airport (OAK) is the secondary airport located across the Bay, located about 21 miles from San Francisco.
+				</p>
+				<p>
+						<a href="https://www.bart.gov/">BART</a> is the Bay Area Rapid Transit train that you can take from the airports to reach the city. Upon landing, you may need to take the airport express train to the right terminal in order to take a BART train.
+				</p>
+				<p>
+						The Mashape HQ is located close to the <a href="http://www.bart.gov/stations/mont">Mongomery St. BART Station</a>.
+				</p>
+				<p>
+						Last, but not least, San Francisco is also very well served by <a href="https://www.uber.com">Uber</a> and <a href="https://www.lyft.com/">Lyft</a>, and very convenient if you are using <a href="https://www.uber.com/ride/uberpool/">UberPool</a> or <a href="https://www.lyft.com/line">Lyft Line</a>. Consider using them for moving around the city, and as an alternative to BART when traveling to/from the airport.
+				</p>
+        <!--
+				<h5>Lodging</h5>
+				<p>
+						For your convenience, discounted rates have been negotiated with the <a href="http://www.nobishotel.se/en/">Nobis Hotel</a> and <a href="http://www.missclarahotel.com/en/">Miss Clara Hotel</a>, both located close to the conference venue. Please use the code LUACONF when registering.
+				</p>
+        -->
+
+				<h5>San Francisco Visitor Info</h5>
+				<p>
+					Visit the <a href="http://www.sanfrancisco.travel/">official San Francisco Visitors website</a> to learn more about the many sights, shops, and restaurants you can discover while you’re in the city.
+				</p>
+			</div>
+		</div>
+
+		<div class="row" style="margin.top: 20px">
+			<div class="twelve columns">
+					<h5 id="PARTICIPANTS">Registered participants (IN PROGRESS)</h5>
+			</div>
+		</div>
+	  <!--
+		<div class="row">
+			<div class="six columns">
+				<p>
+					Nils Nordman (Adten)</br>
+					John Axel Eriksson (Adten)</br>
+					Patrik Nylén (Adten)</br>
+					Niklas Dahlquist (Atollic)</br>
+					Andreas Jonsson (Autodesk)</br>
+					Niklas Frykholm (Autodesk)</br>
+					Arnaud Taffanel (Bitcraze AB)</br>
+					Andrew Armstrong (Cadonix Ltd.)</br>
+					Jean-Luc Jumpertz (Celedev)</br>
+					James Callahan (ChatID)</br>
+					Rob Kendrick (Codethink Ltd.)</br>
+					Daniel Silverstone (Codethink Ltd.)</br>
+					Pablo Musa (Elastic)</br>
+					Robert Virding (Erlang Solutions AB)</br>
+					Tomas Eriksson (Gears Of Leo AB)</br>
+					Johan Högfeldt (Hammarhaja AB)</br>
+					Tomas Roos (HappyPancake AB)</br>
+					Jesper Bylund (HappyPancake AB)</br>
+					Paul Cuthbertson (Import.io)</br>
+					Ignacio Burgueño (inConcert)</br>
+					Asif Kabani (ISRDC)</br>
+					Alexander Zezulinsky (KnCMiner AB)</br>
+					Pierre Chapuis (Lima Technology)</br>
+					Alexander Gladysh (LogicEditor)</br>
+					Dmitry Potapov (LogicEditor)</br>
+					Marc Balmer (micro systems)</br>
+					Vera Hardmeier (micro systems)</br>
+					Gabrielle Lindesvärd (Netlight Consulting AB)</br>
+					Rickard Westerlund (Paradox Interactive)</br>
+					Hans Rönnbäck (Paradox Interactive)</br>
+					Viktor Svensson (Paradox Interactive)</br>
+					Anders Elfgren (Pixeldiet Entertainment)</br>
+					Fredrik Engkvist (Pixeldiet Entertainment)</br>
+					Daniel Zwirner (QIAGEN Instruments AG)</br>
+					Claus Kühnel (QIAGEN Instruments AG)</br>
+					Ludwig Heusser (QIAGEN Instruments AG)</br>
+					Dibyendu Majumdar (Ravi)</br>
+					Petar Jovanovic (RT-RK)</br>
+					Stefan Pejic (RT-RK)</br>
+					Djordje Kovacevic (RT-RK)</br>
+					Violeta Vukobrat (RT-RK)</br>
+					Branislav Rankov (RT-RK)</br>
+					Maliha A. Kabani (Save the Children)</br>
+					Augustinas Bacvinka (SoftDent Ltd.)</br>
+					Žilvinas Račyla (SoftDent Ltd.)</br>
+					Daniel Kolesa (Samsung Electronics UK Ltd.)</br>
+					Lauri Peltomäki (Solinor Oy)</br>
+					Dirk Feytons (Technicolor)</br>
+					Arne Jonsson (Tilgin AB)</br>
+					Konstantin Osipov (Tarantool)</br>
+					Johan Lövdahl (UXvibe)</br>
+					Christer Sandberg (Webstep)</br>
+				</p>
+			</div>
+			<div class="six columns">
+				<p>
+					Anna-Sofia Lejman</br>
+					Aapo Talvensaari</br>
+					Alessandro Delgado</br>
+					Dang Ky Kua</br>
+					Daniel Lindqvist</br>
+					Edgard Arakaki</br>
+					Gustav Björklind</br>
+					Johanna Hackzell</br>
+					Natalia Wieczorek</br>
+					Patrik Nordlander</br>
+					Reid Beels</br>
+					Rikard Björklind</br>
+					Sampsa Stenström</br>
+					Tomi Tavela</br>
+					Tom Sutcliffe</br>
+					Dennis Holmén (Dreamhack)</br>
+					Igor Popov (Moscow Institute of Physics and Technology)</br>
+					Carlos Aguilar (Karolinska Institutet)</br>
+					Mehmood Alam Khan (Royal Institute of Technology)</br>
+					Dmitry Ivanov (King)</br>
+					Miroslaw Cholewinski (King)</br>
+					Samuel Beijer (King)</br>
+					Andreas Jirenius (King)</br>
+					Isabelle Gouwy (King)</br>
+					Adam Westman (King)</br>
+					Giacomo Lo Giusto (King)</br>
+					Linus Cumselius (King)</br>
+					Nils Segebaden (King)</br>
+					Marcus Lagerström (king)</br>
+					Björn Nystedt (King)</br>
+					Dmytriy Polishchuk (King)</br>
+					Piotr Paczkowski (King)</br>
+					Daniel Ekström (King)</br>
+					Daniel Nystrand (King)</br>
+					Sara Norberg (King)</br>
+					Rami Sleiman (King)</br>
+					Rakiv Ahmed (King)</br>
+					ChristerJonsson (King)</br>
+				</p>
+			</div>
+		</div>
+	</div>
+	-->
+
+	<!-- Footer -->
+	<div style="background: #303030; padding-left: 10%; padding-right: 10%; padding-top: 20px; padding-bottom: 20px; color: #F0F0F0">
+		<div class="row">
+			<div class="seven columns">
+				<p>
+					Organisers:
+				</p>
+				<a href="https://www.mashape.com"><img src="images/mashape.png" height="130" width="130"/></a>
+				<a href="http://www.lua.org"><img src="images/Lua-Logo.png" width="130" height="130" style="margin-left: 40px"/></a>
+			</div>
+			<div class="five columns">
+				<p>
+					Share:
+				</p>
+				<!-- I got these buttons from simplesharebuttons.com -->
+				<!-- Facebook -->
+				<a href="http://www.facebook.com/sharer.php?u=http://luasf2016.org/" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>
+
+				<!-- Twitter -->
+				<a href="http://twitter.com/share?url=http://luasf2016.org/&text=Lua Workshop 2016&hashtags=luawshop16" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a>
+
+				<!-- Google+ -->
+				<a href="https://plus.google.com/share?url=http://luasf2016.org/" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/google.png" alt="Google" /></a>
+
+				<!-- Digg -->
+				<a href="http://www.digg.com/submit?url=http://luasf2016.org/" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/diggit.png" alt="Digg" /></a>
+
+				<!-- Reddit -->
+				<a href="http://reddit.com/submit?url=http://luasf2016.org/&title=Lua Workshop 2016" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" /></a>
+
+				<!-- LinkedIn -->
+				<a href="http://www.linkedin.com/shareArticle?mini=true&url=http://luasf2016.org/" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" /></a>
+
+				<!-- Pinterest -->
+				<a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="http://www.simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" /></a>
+
+				<!-- StumbleUpon-->
+				<a href="http://www.stumbleupon.com/submit?url=http://luasf2016.org/&title=Lua Workshop 2016" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/stumbleupon.png" alt="StumbleUpon" /></a>
+
+				<!-- Email -->
+				<a href="mailto:?Subject=Lua Workshop 2016&Body=You%20should%20really%20attend%20this!%20 http://luasf2016.org/"><img src="http://www.simplesharebuttons.com/images/somacro/email.png" alt="Email" /></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- End Document -->
+	<script>
+		smoothScroll.init();
+	</script>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-62613830-1', 'auto');
+	ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>
