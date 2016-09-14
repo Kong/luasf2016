@@ -32,3 +32,9 @@ p.time {
   display: inline;
   margin-left: 30px;
 }
+
+p.abstract {
+  display: block;
+  margin-top: 0.5em;
+  font-size: small;
+}
