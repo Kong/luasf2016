@@ -234,7 +234,7 @@
 
 		<div class="row">
 			<b>TBA</b></br>
-			<i>Roberto Ierusalimschy (PUC-Rio)</i></br>
+			<i>Roberto Ierusalimschy</i> (PUC-Rio)</br>
 			<p class="abstract">
 				
 			</p>
@@ -242,7 +242,7 @@
 
 		<div class="row">
 			<b>The Haxe Lua target</b></br>
-			<i>Justin Donaldson</i></br>
+			<i>Justin Donaldson</i> (Salesforce)</br>
 			<p class="abstract">
 				The Haxe Lua target brings some benefits that greatly help large, complex Lua applications. It has standard OOP, structural typedef, dynamic, and flexible macro-defined type checking, and has an especially speedy compiler. In addition, it has special support for Lua externs and idioms, and can emit code that 
 			</p>
@@ -273,7 +273,7 @@
 
 		<div class="row">
 			<b>Peer to Peer publish/subscribe using Lua and DDS</b></br>
-			<i>Gianpiero Napoli (RTI)</i></br>
+			<i>Gianpiero Napoli </i>(RTI)</br>
             <p class="abstract">
 				During this talk we will explore how in RTI we used Lua to simply Publish Subscribe communication in a distributed system. Lua was first used to add scripting capability to one of our Rapid Prototyping tool, and then elevated to first class citizen scripting language to create complex pub/sub distributed systems based on the OMG standard Data Distribution Service (DDS) Data Distribution Service (DDS) is the platform for the Industrial Internet of Things (IIoT). It offers real-time, peer-to-peer, standard, data-centric publish subscribe. With RTI DDSConnector you can now exploit the power of DDS within Lua without having to deal with complex APIs. Define your data types, your data writers, data readers and desired quality of service in a XML file and simply load it in your Lua application. Your applications will effortlessly become participants in a logically shared, but decentralized peer-to-peer data-space with other applications over a LAN or WAN. DDS is an open real-time connectivity framework standard that has proven itself in industrial systems for building highly reliable systems that can be trusted without a single point of failure, and as a peer-to-peer (P2P) architecture with no message servers or brokers. If you need a connectivity framework that is fast, that can scale to hundreds of nodes, that is monitorable and robust, and if your system has to last, adapt to new technologies, work in heterogeneous environments or connect to legacy systems, DDS is the answer. If you want to do all that in Lua, DDSConnector is your answer. We will cover the basics of DDS with some practical examples and then dive in a few demos on how to use DDS in Lua through RTI DDS Prototyper.
 			</p>
@@ -282,7 +282,7 @@
 		<div class="row">
 			
 			<b>IREP and Lua</b></br>
-			<i>Lee Busby (LLNL)</i></br>
+			<i>Lee Busby</i> (LLNL)</br>
 			<p class="abstract">
 				The Intermediate Representation (IREP) reads program input from Lua tables, and transfers the data into compiled structures whose layout is similar to the tables. The compiled structures are shareable between C/C++ and Fortran. IREP can handle most varieties of "Plain Old Data" and has mechanisms to extend it beyond POD. Structure templates are written using simple cpp(1) macros. No preprocessing nor metaprogramming is necessary. The Lua table reader is generic. No additional code beyond the structure template is normally required for IREP to read the matching Lua table. IREP uses only standard language features. Interestingly, this requires a couple of capabilities new in Fortran. Our next generation physics simulation code is embedding Lua as its configuration and steering language, and now includes IREP.
 			</p>
@@ -306,7 +306,7 @@
 
 		<div class="row">
 			<b>Regex Considered Harmful: Use Rosie Pattern Language Instead</b></br>
-			<i>Jamie Jennings (IBM)</i></br>
+			<i>Jamie Jennings</i> (IBM)</br>
 			<p class="abstract">
 				Of the more than 2.5 billion Gb of data being produced daily, about 75% is unstructured, and only about 0.5% is ever analyzed.  The goal of big data analytics is to fish useful insights out of the rising tide of available data -- but the first step is to parse the raw data, and the most popular tools today are built on a shaky foundation. Most tools (e.g. Perl, PCRE, ElasticSearch, Splunk, most Apache parsers) for processing unstructured text rely on regexes, extensions of regular expressions.  But regexes are not easy to write, and are notoriously difficult to read and maintain.  Also, regexes have surprisingly variable performance in practice.  So it's best to avoid putting a regex engine in your big data pipeline. In this talk, we introduce Rosie Pattern Language, an alternative to regexes.  RPL shares key concepts and notation with regexes, but RPL patterns are more powerful.  RPL is designed like a programming language: composable patterns are bound to identifiers; comments and whitespace are allowed within patterns; and patterns may be grouped into modules.  Such features facilitate the creation, maintenance, and sharing of patterns.  Finally, RPL matching (parsing) is consistently fast, often several times faster than competing tools. Rosie Pattern Language is implemented in Lua; the RPL compiler produces expressions which are then processed at run-time by the lpeg pattern matching engine.  While patterns are defined (specified) in RPL, post-match processing (including data format conversion) is done in Lua.  Thus, Lua is the extension language for RPL, allowing users to add new data format conversion and validation routines. Rosie is open source, released under the MIT License, and can be found at https://github.com/jamiejennings/rosie-pattern-language.
 			</p>
@@ -314,7 +314,7 @@
 
         <div class="row">
 			<b>Mass spectrometry assay optimization using functional programming patterns in Lua.</b></br>
-			<i>Bennett Kalafut (Thermo Fisher Scientific)</i></br>
+			<i>Bennett Kalafut</i> (Thermo Fisher Scientific)</br>
 			<p class="abstract">
 				Determination of fragment ions and tuning of compound-specific ion source and ion-optical parameters is a necessary step in the development of specific and sensitive tandem mass spectrometry assays. Using embedded Lua, we have automated this optimization process for Thermo Fisher Scientific's TSQ Quantiva and TSQ Endura mass spectrometers. Treating the combination of optimizations as function composition and higher-order functions as composable iterators has allowed us to adopt programming concepts from functional languages such as map, filter, reduce, and function decorators/functionals. This has resulted in a simple and flexible design, easily extendable to accommodate new peripherals and new user options such as loop flow injection of samples. I will present this design, including what we do to remove or hide state and side-effects.
 
@@ -323,20 +323,77 @@
 
 		<div class="row">
 			<b>Working with strongly typed data models in Lua for building Industrial Internet of Things (IIoT) applications</b></br>
-			<i>Rajive Joshi (RTI)</i></br>
+			<i>Rajive Joshi</i> (RTI)</br>
 			<p class="abstract">
 				Building IIoT systems involves integrating independently developed components using shared strongly typed data models rooted in the physics of the application domain. Data Domain Specific Language (DDSL) is a pure Lua module that makes it easy and fun to work with strongly typed data models in Lua. It was borne out of a practical need for effectively working with data types constrained by an underlying data model in the dynamically typed Lua environment. It is being used with the Data Distribution Service (DDS), the predominant open standard connectivity framework for IIoT systems integration. Like an Interface Description Language (IDL), DDSL can be used to define data models; however, unlike an IDL the data models can be defined programmatically and incrementally, thus providing the foundation for automated data model mapping and machine learning. Data model instances are kept in sync with the underlying data model---when a model is changed, all the linked instances get updated. A newly added field is automatically initialized to the correct instance specific hierarchical path leading up to that field in the data model. This can be viewed as an automatically generated index for storage, and is used, for example, to access the fields when exchanging complex data types using DDS. DDSL has been applied to create data generators for automated testing; it can also be applied for specifying range constraints and units, for automated checking of data instance fields, and feeding templating engines. DDSL can also export the data models to IDL, or import data models defined in XML. This talk will provide the rationale behind DDSL, an introduction to data modeling with DDSL, and show a working demonstration of how it is being used to build data-centric distributed IIoT applications with Lua and DDS.
 			</p>
 		</div>
 
 		<div class="row">
-			<b>Studying the Evolution of an Application's Lua/C API</b></br>
+			<b>API Design for Lua and C Applications</b></br>
 			<i>Mitchell Balan</i></br>
 			<p class="abstract">
-				Textadept is a fast, minimalist, and remarkably extensible cross-platform text editor written in a combination of C and Lua. It provides users with a Lua API that gives them complete control over the entire application -- everything from moving the caret to changing menus and key commands on the fly to handling core events is possible. Over the last 9 years, Textadept's API has grown to be more efficient, expressive, and elegant, all while strictly maintaining its minimalism. By exploring the development of this API over time, we gain a unique insight into the internals of a long-lived Lua and C application, about decisions made, and about lessons learned. Come and learn about all of this from a developer's perspective.
+				Lua is well known for its unique abilities as an embedded scripting language. Not only can developers extend their C applications with Lua, but with the proper interface, users can too! Designing APIs for both internal and external use can be tricky and require many iterations to "get it right". Over the last 9 years, the Textadept text editor's Lua and C APIs have benefited from relentless refactorings and reworkings, and users can extend the application more easily and intuitively than ever before. Come and learn about how you can enable users to extend your C applications with Lua, as we explore many of the lessons learned about API design from Textadept's development.
 			</p>
 		</div>
 
+		<div class="row">
+			<b>A Sun For the Moon - A Zero-Overhead Lua Abstraction using C++</b></br>
+			<i>ThePhD</i></br>
+			<p class="abstract">
+				Oftentimes, programmers wish to integrate Lua into an existing application, mainly into C or C++ codebases. For this, they use the C API. Because of its low-level stack-based semantics, individuals often try to wrap it up into useful primitives or small wrapper libraries. Sometimes, they do this well: in other cases, it is not executed nearly as nicely. This presentation will talk about what it takes to wrap the Lua C API up in a C++ interface that's easy to use, using the sol2 library as an example. It will discuss the implementation choices and potential pitfalls in both the context of C and C++ using existing libraries (Luabind, Selene, etc.) and highlight how to properly use the Lua 5.1, 5.2 and 5.3 C API for both performance and ease of use.
+			</p>
+		</div>
+
+		<div class="row">
+			<b>Building a large web application in Lua with Lapis: itch.io</b></br>
+			<i>Leaf Corcoran</i></br>
+			<p class="abstract">
+				itch.io is an independent game marketplace, home to over 44k independent creations. It's build in MoonScript and Lapis, with over 130k lines of MoonScript (Compiled to ~200k Lua). Lapis is a web framework that runs inside of OpenResty. In this talk I'll discuss how Lapis is structured from a high level, how itch.io's application code is organized, how we develop new features, advantages we've noticed compared to other frameworks, how we test, and how itch.io influences Lapis's design.
+			</p>
+		</div>
+
+		<div class="row">
+			<b>Lua in WAFs: An examination of Lua's use in ModSecurity and other web application firewalls</b></br>
+			<i>Robert Paprocki</i> (DreamHost)</br>
+			<p class="abstract">
+				As web applications evolve and grow in complexity and ubiquity, the need to develop performant web application firewall (WAF) solutions as grown as well. This talk will focus on the history and use of Lua in open source WAF solutions. We will discuss how the Apache (and now platform-agnostic) ModSecurity leverages embeded Lua to provide rule authors a powerful extension to the ModSecurity DSL. We will also discuss how developments in the OpenResty community allow for the development of complex Lua applications in the context of the Nginx proxy ecosystem, and examine one such project (lua-resty-waf) in close detail, discussing performance, comparing its feature set with existing open source WAF projects, and discussing the role Lua and LuaJIT plays in optimizing execution times.
+			</p>
+		</div>
+
+		<div class="row">
+			<b>Writing optimal Lua code for LuaJIT and OpenResty</b></br>
+			<i>Yichun Zhang</i> (CloudFlare)</br>
+			<p class="abstract">
+				OpenResty is a high performance web platform built on Lua and NGINX. We have large-scale Internet products built upon OpenResty in companies like CloudFlare, Jingdong, Adobe, Tencent, Sina, Alibaba, Youku, and many others. Over the years, we created many advanced profiling tools that can do online and offline performance analysis. In this presentation, the creator of OpenResty, Yichun Zhang, will examine various important Lua coding details that matter a lot in high performance Lua web applications atop LuaJIT and OpenResty. Then he will walk through some interesting details in the LuaJIT internals when performance is concerned. Finally, approaches like higher level DSLs will be proposed to do automatic Lua code optimizations on Lua programmers' behalf.
+			</p>
+		</div>
+
+		<div class="row">
+			<b>The history and design of LuaCocoa</b></br>
+			<i>Eric Wing</i> (PlayControl Software)</br>
+			<p class="abstract">
+				This talk will explore the subtle details of building a full featured language bridge between Lua and Cocoa, which needs to go far beyond just Objective-C bridging and address the evolution of technology and requirements on Apple platforms over the past 15 years of LuaCocoa's history, such as memory management and the optional Obj-C garbage collector, C types, subclassing, blocks, BridgeSupport, Scripting Bridge, sandboxing, etc.
+			</p>
+		</div>
+
+		<div class="row">
+			<b>Tales of a Lua engine embedder thrown into the JavaScript world</b></br>
+			<i>Eric Wing</i> (PlayControl Software)</br>
+			<p class="abstract">
+				This talk will compare and reflect the process and challenges of embedding JavaScript from the perspective of somebody who comes from the Lua embedding world. To further spice things up, iOS and Android (and maybe WinRT) will be the target platforms discussed, all of which are partially locked down platforms with non-standards compliant parts which even in the Lua case poses additional challenges.
+			</p>
+		</div>
+
+		<div class="row">
+			<b>Programming iOS in Lua: a bridge story </b></br>
+			<i>Jean-Luc Jumpertz</i> (Celedev)</br>
+			<p class="abstract">
+				Building a solid bridge between Lua and an entire OS SDK is certainly a complex and challenging task. You need to adapt the calling conventions and design patterns used in the OS SDK to make them feel simple and natural in Lua; you have to manage the peaceful coexistence of different memory management models, and of different typing systems; and of course you have to write the binding code that allow Lua code and the native OS SDK to communicate with each other. In this talk, I will explain how these points were handled in the Lua to iOS / macOS bridge we have developed as part of the CodeFlow IDE, and how integrating the bridge with the IDE can greatly improve the developer experience.
+			</p>
+		</div>
+
+		
 		<!--
 		<div class="row">
 			<div class="four columns">
